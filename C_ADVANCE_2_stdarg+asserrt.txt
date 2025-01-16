@@ -1,0 +1,10 @@
+STDARG - ASSERT (lib)
+-chính là macro variadic
+- cung caasp các phương thức để làm việc với các hàm số có số lượng input parameter không cố định
+- Các hàm như printf và sacnf là ví dụ
+
+
+~~~ Thư viện STDARG
+#include <stdarg.h>
+
+- đối với các tham số k biết trước số lượng dùng "..." để thể hiện

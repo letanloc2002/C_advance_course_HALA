@@ -1,0 +1,20 @@
+POINTER
+- là một viến chứa địa chỉ bộ nhớ của một đối tượng(biến, mảng, hàm)
+- cách khai báo : int *ptr;
+- kích thước của con trỏ: sizeof(); phụ thuộc vào máy tính và trình biên dịch hoặc kiến trúc VXL
+- kiểu dững liệu dùng để khai báo con trỏ, ảnh hưởng đến kích thước bước nhảy, truy cập dữ liệu 
+
+- void pointer: dùng được dùng để trỏ tới bất kì địa chỉ nào mà không cần biết tới kiểu dữ liệu của giá trị tại địa chỉ đó
++ cú pháp : void *ptr_void;
++ muốn đọc đúng dữ liệu phải ép kiểu con trỏ, (int*)ptr_void
+
+- function Pointer: là một biến mà giữ địa chỉ của một hàm. Nó trỏ đến vùng nhớ trong bộ nhớ
++ quan tâm tới kiểu trả về và input
++ cú pháp <return_type> (* func_ptr)(<data_type_1>,<data_type_2>);
++ vd: void (*ptr)();
+	ptr = &func1;// có thể có "&" hoặc không
+
+- Pointer to constant: là cách định nghĩa một con trỏ không thể thay đối giá trị tại địa chỉ mà nó trỏ đến thông qua dereference nhưng giá trị tại địa chỉ 
+- Cóntant to pointer: là cách định nghĩa một con trỏ không thể thay đổi địa chỉ
+- Null pointer: là con trỏ không trỏ đến bất kì dối tượng nào
++ int *ptr = NULL

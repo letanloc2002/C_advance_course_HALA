@@ -1,0 +1,32 @@
+COMPILER PROCESS
+
+- Mỗi IDE sẽ có 2 thành phần chính là Editor và Compiler
+
+- quá trình biên dịch của Compiler gồm 4 bước
+- Preprocessor từ file .h , .c thành file .i: thêm vào các mã nguồn, xóa chú thích, thay các macro
+
+-MACRO
++ Include: chèn đoạn mã nguồn vào file main. <> dấu ngoặc nhọn dùng cho các thư viện chuẩn, máy tính sẽ tìm kiếm trong thư mục cài đặt, "" dùng cho thư viện người dùng viết, máy sẽ tìm kiếm trong thư mục của main.c
+
+VD:
+#define Create_func(name, content)	\
+void name()				\
+{					\
+	printf(content)			\`
+}
+
+
+
+- toán tử
+// #: chuẩn hóa đoạn văn bản lên chuỗi
+/  ##: nối chuỗi
+
+// variadic:
++ ...: biểu thị các đối số không xác định
++ __VA_ARGS__ : thay thế bằng danh sách các đối số
+
+- từ file.i tạo ra file.s (assamblely) (BƯỚC 2)
+
+- từ file.s tạo ra file.o : là mã nhị phân, máy tính có thể hiểu được  (BƯỚC 3)
+
+- từ file.o tạo thành file.exe: là file liên kết nhiều file.o (linker)  (BƯỚC 4)
