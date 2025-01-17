@@ -1,0 +1,24 @@
+Extern:
+Khái niệm Extern trong ngôn ngữ lập trình C được sử dụng để thông báo rằng một biến hoặc hàm đã được khai báo ở một nơi khác trong chương trình hoặc trong một file nguồn khác. Điều này giúp chương trình hiểu rằng biến hoặc hàm đã được định nghĩa và sẽ được sử dụng từ một vị trí khác, giúp quản lý sự liên kết giữa các phần khác nhau của chương trình hoặc giữa các file nguồn.
+
+- LƯU Ý: các file phải được liên kết với nhau thì extern mới có thể sử dụng được
+- chỉ sử dụng cho biến toàn cục
+- Ví dụ muốn liên kết file main.c test1.c test2.c
+-> gcc main.c test1.c test2.c -o main
+- tương tự với biến extern cũng có thể sử dụng được cho hàm, tức nghĩa là hàm được viết trong file này cũng có thể sử dụng trong file khác, nhưng đối với các hàm cùng folder nhưng kahcs file thì vẫn sử dụng được theo cơ chế biên dịch của C, nên trong trường hợp này extern hàm không có ý nghĩa lắm
+- thường ứng dụng trong việc thiết kế thư viện, sau đó include file .h vào trong file main
+
+
+Static: 
+- Static cục bộ: sẽ được khởi tạo 1 lần duy nhất, và địa chỉ sẽ tồn tại trong xuyên suốt chương trình, giữ giá trị qua các lần gọi hàm
++ có thể can thiệp 1 biến static cục bộ thông qua 1 con trỏ toàn cục với giá trị là địa chỉ của biến đó
+- Static toàn cục.
++ khai báo ở file nào thì sẽ chỉ được sử dụng ở file đó
+
+
+register:
+- khi khai báo register thì dữ liệu sẽ được lưu trên thanh ghi, thời gian thực hiện sẽ nhanh hơn, ứng dụng đối với các phép toán số học giúp giảm thời gian tính toán
+- chỉ sử dụng được cho biến cục bộ, vì biến toàn cục sẽ tồn tại trong suốt thời gian chương trình, nên nếu sử dụng trong toàn cục thì sẽ chiếm 1 thanh ghi, từ đó làm giảm hiệu suất ctrinh
+
+
+volatile: chống compiler tối ưu hóa các biến thành giá trị
