@@ -12,7 +12,7 @@ int Addnumber(int n, ...)
     {
         result += value;
     }
-    va_end(ptr);
+    va_end(ptr, n);
     return result;
 }
 
