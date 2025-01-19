@@ -10,9 +10,9 @@
             PRINT_MENU_ITEM(i + 1, items[i]);     \
         }                                         \
     } while (0)
-
+// function
 int main()
 {
-    PRINT_MENU("Option A", "Option B", "Option C");
+    PRINT_MENU("Option A", "Option B", "Option C", "Option D", "Option E", "Option G");
     return 0;
 }
