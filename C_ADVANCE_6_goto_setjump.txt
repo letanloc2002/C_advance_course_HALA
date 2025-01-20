@@ -1,0 +1,20 @@
+##GOTO: 
+cú pháp: goto <label>
+ví dụ: if (i>=5) goto end;
+end:
+ -> khi thõa điều kiện thì ctrinh sẽ nhảy tới end
+hoặc: start:
+goto start;
+-> khi ctrinh chạy tới goto start thì ctrinh sẽ nhảy tới start
+
+++> ứng dụng trong việc thoát khỏi nhiều vòng lặp
+**NOTE: phải nằm trong cùng 1 hàm
+
+
+##setjump.h
+- xịn hơn goto, có thể nhảy từ hàm này sang hàm khác
+- có thể lưu giá trị thanh ghi, như PC, lưu trữ giá trị tại vị trí nó đứng
+##longjump.h: longjmp(buf,return_value_for_buf)
+- nhảy lại vị trí đã lưu của setjum
+
+- ứng dụng của setjmp để kiểm tra lỗi
