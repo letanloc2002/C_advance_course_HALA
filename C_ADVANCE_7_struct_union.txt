@@ -1,0 +1,30 @@
+STRUCT: là kiểu dữ liệu do user tự định nghĩa
+- cách khai báo, con trỏ
+typedef struct 
+{
+	char* name;
+	int age;
+	double gpa;
+}SinhVien;
+SinhVien sv1;
+SinhVien *sv2;
+- kích thước struct
++ data alignment
+/*
+	-double (8bytes):0xa0.0xa8,v.v
+-int, int32_t,uint32_t(4bytes):-xb--,-xb4,0c
+*/
++ data padding là quá trình trình biên dịch thêm các byte trống (padding bytes) vào giữa các thành viên của một struct để đảm bảo dữ liệu được căn chỉnh đúng cách trên bộ nhớ (memory alignment). Điều này giúp CPU truy cập dữ liệu nhanh hơn, nhưng có thể làm tăng kích thước tổng thể của struct.
+
+- các biến được cấp phát giữa các biến trong struct sẽ liền kề với nhau
+
+
+
+STRUCT ARR
+
+
+BIT FIELD
+
+
+
+UNION: cũng có những thành phần như struct, nhưng sử dụng chung 1 vùng nhớ, bộ nhớ chỉ được cấp phát 1 lần, khong như struct, các biến thnafh viên sẽ chia sẽ chung 1 vùng nhớ
