@@ -12,7 +12,7 @@ SinhVien *sv2;
 + data alignment
 /*
 	-double (8bytes):0xa0.0xa8,v.v
--int, int32_t,uint32_t(4bytes):-xb--,-xb4,0c
+-int, int32_t,uint32_t(4bytes):0xb00,0xb4,0c
 */
 + data padding là quá trình trình biên dịch thêm các byte trống (padding bytes) vào giữa các thành viên của một struct để đảm bảo dữ liệu được căn chỉnh đúng cách trên bộ nhớ (memory alignment). Điều này giúp CPU truy cập dữ liệu nhanh hơn, nhưng có thể làm tăng kích thước tổng thể của struct.
 
@@ -24,6 +24,14 @@ STRUCT ARR
 
 
 BIT FIELD
+- là thành phần đặc biệt của cấu trúc Struct chho phép bạn chỉ định số lượng bit cụ thể dùng để lưu trữ một biến số nguyên. Thay vì sử dụng toàn bộ kích thước của một kiểu dữ liệu bạn có thể cắt nhỏ bộ nhớ theo số bit cần thiết, giúp tiết kiệm không gian bộ nhớ và mô tả chính xác hơn ý nghĩa của dữ liệu
+
+struct Example 
+{
+    int32_t flag  : 1;	// chỉ sử dụng 1 trong 32 bit
+    int64_t count : 4;	// chỉ sử dụng 4 trong 64 bit
+};
+- Không thể sử dụng toán tử lấy địa chỉ (&) trên các thành viên bit field
 
 
 

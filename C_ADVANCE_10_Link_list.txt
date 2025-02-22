@@ -1,0 +1,17 @@
+LINK LIST
+- việt xóa 1 phần tử trong mảng được thực hiện
++ dịch trái n byte và realloc byte cuối cùng của mảng
+-> nhưng xuất hiện vấn đề là nếu mảng có 1000 phần tử hoặc hơn thì sẽ tốn rất nhiều tài nguyen cho 2 bước trên
+- tương tự với việc thêm 1 phần tử vào 1 mảng, cũng sẽ tốn rất nhiều tài nguyên
+==> nên người ta sẽ tạo ra 1 kiểu dữ liệu mới để khắc phục vấn đề trên đó là link list
+
+
+*********
+Link list là một cấu trúc dữ liệu trong lập trình máy tính, được sử dụng để tổ chức và lưu trữ dữ liệu. Một linked list bao gồm một chuỗi các nút (nodes). mỗi nút chứa một giá trị dữ liệu và 1 con trỏ(pointer) đến nút tiếp theo trong chuỗi
+- ở dạng link list mỗi phần tử được xem là 1 node, các địa chỉ này không liền kề nhau nhưng được liên kết
+
+tydef struct Node
+{
+	int data; 
+	struct Node *next;
+}Node;

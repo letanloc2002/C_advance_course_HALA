@@ -1,0 +1,31 @@
+MEMORY LAYOUT
+
+- chương trình main.exe hay main.hex được lưu ở bộ nhớ SSD hoặc Flash. Khi Run ctrinh thì những chương trình này sẽ được copy vào bộ nhớ RAM để thực thi.
+
+- phân vùng text
++ chứa tập hợp các lệnh thực thi
++ Quyền truy cập: Text Segment thường có quyền đọc và thực thi nhưng không có quyền ghi
++ Lưu hằng số toàn cục(const), chuỗi hằng - string literal.
++ vì phân vùng này không có quyền ghi nên các biến lưu ở phân vùng text đều không thể  thay đổi giá trị mà chỉ được đọc.
+
+- phân vùng data.
++ Initialized Data Segment (Dữ liệu đã khởi tạo)
++ Chứa các biến toàn cục được khởi tạo với giá trị khác 0.
++ Chứa các biến static (global +local) được khởi tạo với giá trị khác 0.
++ Quyền truy cập đọc và ghi, tức là có thể đọc và thay đổi giá trị của biến.
++ Tất cả các biến sẽ được thu hồi sau khi chương trình kết thúc.
+
+- Phân vùng bss.
++ Uninitalized Data Segment (Dữ liệu Chưa khởi tạo).
++ Chứa các biến toàn cục khởi tạo với giá trị bằng 0 hoặc không gán giá trị.
++ Chứa các biến static với giá trị khởi tạo bằng 0 hoặc không gán giá trị.
++ Quyền truy cập là đọc và ghi, tức là có thể đuọc và thay đổi giá trị của biến.
++ Tất cả các biến sẽ được thu hồi sau khi chương trình kết thúc.
+
+
+- Phân vùng Stack
++ Chứa các biến cục bộ (trừ static cục bộ), tham số truyền vào.
++ Hằng số cục bộ có thể thay đổi thông tin thông qua con trỏ, tức là nếu truy cập trực tiếp qua biến thì không thể thay đổi giá trị nhưng nếu truy cập thông qua con trỏ thì có thể thay đổi giá trị.
++ Quyền truy cập: đọc và ghi, nghĩa là có thể đọc và thay đổi giá trị của biến trong suốt thời gian chạy
++ Sau khi ra khỏi hàm, tự động thu hồi vùng nhớ.
+

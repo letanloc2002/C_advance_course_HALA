@@ -1,7 +1,0 @@
-MEMORY LAYOUT
-
-- chương trình main.exe hay main.hex được lưu ở bộ nhớ SSD hoặc Flash. Khi Run ctrinh thì 
-
-- phân vùng text
-+ chứa tập hợp các lệnh thực thi
-- Quyền truy cập: Text Segment thường có quyền đọc và thực thi nhưng không có quyền ghi

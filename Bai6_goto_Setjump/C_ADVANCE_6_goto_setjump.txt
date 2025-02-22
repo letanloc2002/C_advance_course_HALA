@@ -18,3 +18,4 @@ goto start;
 - nhảy lại vị trí đã lưu của setjum
 
 - ứng dụng của setjmp để kiểm tra lỗi
+
