@@ -1,0 +1,8 @@
+- JSON là viết tắt của "JAVASCRTIPT object Notation"(Ghi chú về đối tượng JavaScript). Đây là một dịnh dạng truyền tải dữ liệu phổ biến trong lập trình và giao tiếp giữa các máy chủ và trình duyệt web, cũng như giữa các hệ thống khác nhau.
+
+
+- JSON được thiết kế để dễ đọc và dễ viết cho con người, cũng như dễ dangtf để phân tích tạo ra cho máy tính. Nó sử dụng một cú pháp nhẹ dựa trên cặp key-value, tương tự như các đối tượng và mảng trong JavaScript. Mỗi đối tượng JSON bao gồm một tập hợp các cặp "key" và "vale", trong khi mỗi 
+
+
+- JSON trong trường dữ liệu sẽ có những thông tin khác nhau, không như struct sẽ có thông tin giống nhau với mỗi object được khai báo
+==> đối với những đối tượng đơn giản biết trước được thông tin thì sẽ sử dụng struct, còn ngược lại với những đối tượng phức tạp và khoog biết trước thông tin thì sẽ sử dụng JSON

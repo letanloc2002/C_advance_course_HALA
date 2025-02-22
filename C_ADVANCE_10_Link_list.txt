@@ -15,3 +15,5 @@ tydef struct Node
 	int data; 
 	struct Node *next;
 }Node;
+
+- nhược điểm: chỉ duyệt được 1 chiều duy nhất
