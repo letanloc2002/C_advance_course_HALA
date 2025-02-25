@@ -6,3 +6,5 @@
 
 - JSON trong trường dữ liệu sẽ có những thông tin khác nhau, không như struct sẽ có thông tin giống nhau với mỗi object được khai báo
 ==> đối với những đối tượng đơn giản biết trước được thông tin thì sẽ sử dụng struct, còn ngược lại với những đối tượng phức tạp và khoog biết trước thông tin thì sẽ sử dụng JSON
+
+=JSON trong C: biến all file thành chuỗi -> phân tích chuỗi
