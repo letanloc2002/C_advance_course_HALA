@@ -1,0 +1,10 @@
+Binary search - Binary tree
+Linear search- tim kiem tuyen tinh
+- duyet qua tung phan tu va so sanh -> ket qua
+
+- nhược điểm: chậm đối với các bài toán số lượng lớn
+
+
+***Binary search
+- trong mảng cần sắp xếp theo một quy luật: phổ biến nhất là sắp xếp tăng dần, 
+- rút ngắn phạm vi tìm kiếm bằng cách tính trung bình của mảng đó, sau khi chia trung bình thì sẽ tìm kiếm bên nửa trái hoặc nữa phải, tiếp tục làm như vậy cho đến khi phạm vi tìm kiếm đủ nhỏ
