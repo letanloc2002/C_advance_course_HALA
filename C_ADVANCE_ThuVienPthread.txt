@@ -1,0 +1,2 @@
+Thư viện PThread: thư viện đa luồng
+- không phải là thư viện tiêu chuẩn cho lập trình đa luồng trong C/C++, cho phép lập trình đa luồng, chạy nhiều task cùng lúc

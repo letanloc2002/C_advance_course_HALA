@@ -1,0 +1,9 @@
+- compiler: quá trình?? đặc điểm quá trình?? macro??
+- thao tác thư viện stdarg - assert - macro ariadic  
+- bitmask: thao tác trên từng bit, các phép toán về bit,
+-pointer: kích thức, kiểu dữ liệu ảnh hưởng ntn,
+- store class; extern, stactic local, global
+- goto-setjump  : điều khiển ctrinh
+- struct-union
+- memorylayout: 5 phân vùng (phân vùng heap: cấp phát động)
+- stack queue:

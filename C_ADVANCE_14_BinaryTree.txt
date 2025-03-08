@@ -1,0 +1,26 @@
+BinaryTree
+- Là một cấu trúc dữ liệu phi tuyến tính, được tổ chức theo thứ cấp bậc phân cấp.
+- node cây tối đa có tối đa 2 node con
+
+
+	****Quy tắc xây dựng cây nhị phân*****
+
+- mỗi phần tử trong array/list sẽ được ánh xạ đến 1 nút trong cây nhị phân
+- cách ánh xạ đến cây:
+	- phần tử tại chỉ số i trong mảng sẽ là gốc của cây con
+	- chỉ số của con trái: 2*i+1
+	- chỉ số của con phải: 2*i+2
+- ứng dụng:
+	- biểu diễn các quan hệ phân cáp
+	- biểu diễn các biểu thức toán học (cây biểu thức)
+
+	*****Cây tìm kiến nhị phân******
+- là một lại cây nhị phân với điểm dặc biệt
+- phải sắp sếp lại mảng thành từ nhỏ đến lớn(có thể thay đổi quy tắc)
+- node đầu tiên là node chính giữa
+- mỗi nút trong câp:
+	- nút trái chứa các giá trị nhỏ hơn giá trị tại nút hiện tại
+	- nút phải chứa các giá trị lớn hơn hoặc bằng giá trị nút hiện tại
+- tính chất
+	- thứ tự sắp xếp: các phần tử đc sắp xếp, cho phép tìm kiếm nhị phân hiệu quả
+	- duyệt câp in-order sẽ trả về danh sách giá trị theo thứ tự tăng dần
