@@ -11,3 +11,17 @@ Cấu trúc dữ liệu
 +"peek/top" để lấy giá trị của phần tử ở đỉnh stack		
 +kiểm tra Stack đầy: top=size-1					top(max)=size-1 =>FULL
 +kiểm tra stack rỗng: top=-1					top =-1 =>EMPTY
+
+
+******Queue*******
+- là một cấu trúc dữ liệu tuân theo nguyên tắc FIFO
+- các thao tác cơ bản trên hàng đợi bao gồm:
++"enqueue"(thêm phần tử vào cuối hàng đợi)
++"dequeue"(lấy phần tử từ đầu hàng đợi)
++"front" để lấy giá trị của phần tử đứng đầu hàng đợi
++"rear" để lấy giá trị của phần tử đứng cuối hàng đợi
++ kiểm tra hàng đợi đầy/rỗng
+
+
+********Circula queue*******
+- khắc phục nhược điểm của linear queue là sẽ tận dụng được tối đa khả năng lưu dữ liệu
