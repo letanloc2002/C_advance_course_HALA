@@ -1,0 +1,70 @@
+4 TÍNH CHẤT HƯỚNG ĐỐI TƯỢNG TRONG CPP
+
+---Private: chỉ cho phép truy cập từ bên trong class
+1. Tính đóng gói(ẩn đi biến)
+- che giấu đi những dữ liệu, chỉ có thể truy cập thông qua những hàm
+- khai báo trong phạm vi private
+
+2. Tính trừu tượng.(ẩn đi hàm)
+- ẩn đi các chi tiết phức tạp chỉ hiển thị thông tin quan trọng
+- đưa hàm vào phạm vi private
+
+3. Tính kế thừa.
+- gộp chung các tính chất của các đối tượng 1 lành 1 và sử dụng cho các đối tượng, tái sử dụng lại mã nguồn.
+
+
+class SinhVien: public DoiTuong
+- chỉ truy cập được những hàm hoặc biến trong phạm vi public trong DoiTuong
+- có thể dùng protected để chứa những biến và hàm nhưng chỉ truy xuất bên trong class con.
+- protected tương tự như private, nhưng protected có thể truy xuất từ 1 class con còn private thì không.
+
+class SinhVien: protected DoiTuong
+- những thành viên từ class cha nằm trong public sau khi qua class còn sẽ thành protected nên sẽ không thể truy cập từ ngoài class
+
+class SinhVien: private DoiTuong
+- không truy cập được từ bên ngoài
+- chuyển tất cả những phạm vi thành private
+
+--> protected và private đều ngăn việc truy cập từ bên ngoài
+
+
+4. Đa kế thừa.
+- kết hợp nhiều chức năng từ nhiều class khác nhau.
+
+
+5. tính đa hình: nhiều hình thái khác nhau
+- có 2 loại đạ hình là : đa hình compile time và đa hình run time.
+
+**** Đa hình run time
+DoiTuong *dt;
+dt =&sv1; dt->display();
+--> sẽ in ra thông tin ở lớp đối tượng chứ k phải ở lớp SinhVien vì dt đang là kiểu dữ liệu đối tượng, để in ra kiểu SinhVien thì cần ép kiểu
+DoiTuong *dt;
+dt =&sv1; (SinhVien *)dt->display();//Down casting từ cha về con
+
+-Up Casting: không sinh ra tình huống lỗi, đều có thể in ra thông tin
+- Down casting: Từ class cha về class con có thể xảy ra trường hợp thiếu thông tin
+
+==> khắc phục lỗi của down casting bằng cách sử dụng "Virtual"
+
+*** Virtual: Hàm ảo là một thành viên được khai báo trong classs cha với từ khóa virtual.
+- khi một hàm là virtual, nó có thể được ghi đè (override) trong class con để cung cấp cách triển khai riêng.
+- khi gọi một hàm ảo thông qua một con trỏ hoặc tham chiếu đang trỏ tới chứ không dựa vào kiểu của con trỏ.
+- diểu dữ liệu sẽ được quyết định dựa trên đối tượng đang trỏ tới. Nó sẽ xác định đối tượng trong lúc chạy chtrinh (runtime)
+
+**** Pure Virtual Function: hàm thuần ảo
+- Hàm thuần ảo là một hàm không có phần định nghĩa trong class cha, được khai báo với cú pháp =0 và khiến class cha trở thành class trừu tượng, nghĩa là không thể tạo đói tượng từ class này
+virtual void display() =0;
+- nếu class có ít nhất 1 hàm thuần ảo thì class đó được xem là class trừu trượng, trừu tượng thì không thể khai báo object từ class này
+- Bắt buộc các class con phải định nghĩa lại hàm thuần ảo
+
+
+****Kế thừa ảo
+- Kế thừa ảo giúp tránh ván đề diamond problem trong đa kế thừa.
+- chỉ có 1 bản sao duy nhất của lớp cơ sở chung được kế thừa.
+- kế thừa ảo giúp quản lý các lớp liên quan đến phần cững và giao tiếp. Điều này giúp tránh trùng lặp tài nguyên và quản lí hiệu quả hệ thống trong hệ thống nhúng.
+- chạy trong quá trình compile
+
+
+
+

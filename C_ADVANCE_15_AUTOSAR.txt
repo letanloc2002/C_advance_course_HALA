@@ -1,0 +1,16 @@
+AUTOSAR là một tiêu chuẩn toàn cầu cho phát triền phần mềm ô tô với mục tiêu là chuẩn hóa kiến trúc phần mềm cho các hệ thống điều khiển điện tử (ECU) trong ô tô, nhằm tăng tính khả chuyển, khả mở rộng và giảm chi phí phát triển.
+->Lợi ích
+	- Có sẵn các tiêu chuẩn để dựa vào
+	- Khả năng tái sử dụng phần mềm cao với các dự án khác nhau
+ 	- dễ dàng thay đổi để tương thích với các dòng MCU khác nhau.
+	- Phần mềm và phần cứng được tách biệt với nhau
+	- dễ quản lý và bảo trì
+***** 
+KIẾN TRÚC AUTOSAR
+autosar-org.tran.slate.goog
+- application layer: bao gồm nhiều tác tụ khác nhau, sử dụng để viết thuật toán và logic
+- runtime enviroment: là tầng trung gian để điều phối
+-basic software: đựa chi làm 3 tầng
+	+system services: là những cái thư việc pthread,quản lí RAM ROM, ngoại vi, mã hóa
+	+abstraction layer: trung gian giữa tầng service và tầng thứ 3, chứa thông tin về cấu hình lấy từ tầng thứ 1 hoặc từ Application layer
+	+Hardware: cấu hình UART GPIO SPI I2C, RAM ROM, Mã hóa

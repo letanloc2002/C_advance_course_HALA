@@ -92,6 +92,8 @@ JsonValue *parse_number(const char **json)
     char *end;
 
     double num = strtod(*json, &end);
+    //*json: địa chỉ đầu chuỗi
+    // nếu end chứa địa chỉ của *json thì không có số nào được chuyển đổi cả
     if (end != *json)
     {
         JsonValue *value = (JsonValue *)malloc(sizeof(JsonValue));
@@ -111,6 +113,7 @@ JsonValue *parse_string(const char **json)
     {
         (*json)++;
         const char *start = *json;
+        // chạy tới cuối chuỗi
         while (**json != '\"' && **json != '\0')
         {
             (*json)++;
@@ -139,7 +142,7 @@ JsonValue *parse_array(const char **json)
     {
         (*json)++;
         skip_whitespace(json);
-
+        // khoi tao
         JsonValue *array_value = (JsonValue *)malloc(sizeof(JsonValue));
         array_value->type = JSON_ARRAY;
         array_value->value.array.count = 0;
@@ -153,7 +156,7 @@ JsonValue *parse_array(const char **json)
 
         while (**json != ']' && **json != '\0')
         {
-            JsonValue *element = parse_json(json); // 70
+            JsonValue *element = parse_json(json);
             if (element)
             {
                 array_value->value.array.count++;
@@ -330,7 +333,7 @@ void test(JsonValue *json_value)
     {
         // Truy cập giá trị của các trường trong đối tượng JSON
         size_t num_fields = json_value->value.object.count;
-        size_t num_fields2 = json_value->value.object.values->value.object.count;
+        // size_t num_fields2 = json_value->value.object.values->value.object.count;
         for (size_t i = 0; i < num_fields; ++i)
         {
 

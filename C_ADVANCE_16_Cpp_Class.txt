@@ -1,0 +1,112 @@
+C++ - Class:
+namespace: sẽ học sau
+using namespace std;
+C++ sẽ bao hàm cả C: những thú làm được C sẽ alfmd dược bên C++
+
+để xuất ra 1 lệnh bên C: 
+cout << "Hello";
+cout << 2<< end1;
+thay đổi các file đuôi sẽ là C++
+
+int x;
+cin >> x;//nhập dữ liệu vào màn hình
+
+
+*****Class****
+
+- Những kieent hức sẽ học ở C++
+	+ Class
+	+ OOP: 4 tính chất hướng đối tượng
+	+ tham chiếu - tham trị
+	+ cấp phát động bên C++
+	+ Auto, decltype
+	+ uniform initialization
+	+ generic programming: nhiều hàm giống tên giống chức năng nhưng khác nhau tham số .
+	+ namespace
+	+ STL: standard template library (vector. list map, iterator)
+	+ Lambda: cách thiết kế một hàm cục bộ, đa phần bên C là hàm toàn cục, còn bên C++ sẽ có thêm hàm cục bộ
+	+ SOLID: 5 nguyên tắc thiết kế hướng đối tượng
+	+ Design Pattern:
+	+ Smart pointer
+	+ Multithreading
+
+
+
+- Class là gì
+
+	+ class tương tự với struct và union, là kiểu dữ liệu là người dùng định nghĩa, nhưng class có thể chứa cả biến và hàm
+	+ Cú pháp:
+
+class SinhVien
+{
+	int age;//khi khai báo như thế này thì sẽ không được phép truy cập từ bên ngoài.//thuộc tính
+	void display()// phương thức (method)
+	{
+		cout << "Tuổi của SV:" << age <<endl;
+	};
+	void create();
+};
+void create(){};// kh bị lỗi với hàm create trong class vì khác scope
+void SinhVien::create()// có thể định nghĩa hàm bằng cách truy 
+cập này
+{
+	SinhVien sv;
+	sv.age=20;
+	sv.display();
+}
+int main ()
+{
+	SinhVien sv1;// đối tượng
+	sv1.age = 20;
+}
+
+
+----
+class ClassName
+{
+private:
+	//các thành phần riêng tư (private) chỉ có thể truy cập bên trong lớp
+	//Dữ liệu thành viên, hàm thành viên,...
+protected:
+	//Các thành phần bảo vệ (protected) tương tự như privated, nhưng có thể truy cập từ lớp kế thừa.
+public:
+	// các thành phần công khai(public) được truy cập từ bên ngoài lớp hoặc trong lớp
+	// Dữ liệu thành viên, hàm thành viên,...
+	//Hàm thành viên và các phương thức khác có thể được định nghĩa tại đây,..
+
+}
+------Constructor 
+- là một hàm có tên trùng với tên class
+- sẽ tự động gọi khi khởi tạo object
+- sử dùng để khởi tạo thông tin ban đầu
+- đặt giá trị mặc định cho constructor 
+
+
+------Initialization list
+SinhVien(sstring newName="",int newAge=18,string=""):name(newName),age(newAge),major(newMajor){}  
+
+------Deconstructor 
+- thêm dấu ~ trước constructor
+- tự động kích hoạt trước khi biến bị thu hồi, dùng để thu bộ nhớ động,..
+------setter and getter
+- dùng để đọc/ghi dữ liệu
+
+------static
+- static lobal-> khởi tạo 1 lần sử dụng trong suốt chtrinh
+-static global -> giới hạn scope
+
+
+->Cpp
+-------static properti
+
+- trường hợp properti được khi báo trong hàm thì nó sẽ được lưu trong Stack(tạm thời)-> các biến của nó cũng là tạm thời -> khi khia báo static thì biến sẽ k phụ thuộc vào đối tượng object
+- muốn sử dụng static properti ở trong class thì phải cấp phát địa chỉ cho properti này
+ví dụ:
+class SinhVien{static int x};
+SinhVien::x;//cấp phát toàn cục vùng nhớ cho biến X
+
+- static method: static void show();
+->chỉ cho phép tương tác với static
+-> có thể gọi trực tiếp từ class mà k thông qua đối tượng : SinhVien::show(); 
+
+

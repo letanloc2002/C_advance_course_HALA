@@ -1,0 +1,11 @@
+ĐA HÌNH COMPILE TIME
+- Được chia nhỏ làm 2 phần
++ Nạp chồng hàm (Function Overloading) là việc định nghĩa nhiều hàm cùng tên nhưng khác tham số trong cùng 1 scope.Trình biên dịch sẽ chọn hàm phù hợp dưa trên kiểu và số lượng đối tượng. Trình biên sịch sẽ xem sắt vào tham số để gọi ra hàm tương ứng.
+	
++Nạp chồng toán tử(Operator Overloading): là việc định nghĩa lại cách hoạt động của các toán tử (+,-,x,:,==,<<,>>,...) cho các kiểu dữ liệu do người dùng định nghĩa (class/Struct)
+	+Cú pháp:  <return_type> operator symbol (parameters){//logic}//parameter chỉ cho phép có 1 tham số.
+
+
+****This Pointer là một con trỏ ẩn có sẵn trong mọi hàm thành viên (method) của class. Nó trỏ đến đối tượng hiện tại mà hàm đang được gọi tên
+
+* tham chiếu là cách tạo ra một tên khác để truy cập cùng một vùng nhớ của một biến đã tồn tại mà không tốn thêm bộ nhớ

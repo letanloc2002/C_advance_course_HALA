@@ -1,0 +1,9 @@
+Bài 20: Generic Programming
+- là phương pháp lập trình các tham số kiểu dữ liệu (type parameter) để viết mã tái sử dụng và hoạt động với nhiều kiểu khác nhau.Kỹ thuật naỳ giúp loại bỏ sự
+
+
+- C++ sử dụng Templated để phát triển khai
+
+* Function Template
+
+- Trong C++, template giúp viết hàm có thể làm việc với

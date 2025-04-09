@@ -1,0 +1,17 @@
+Bài 19: các nguyên tắc thiết kế hướng đối tượng (SOLID)
+- SOLID là tập gợp 5 nguyên tắc thiết kế phần mềm giúp tạo ra mà nguồn dễ bảo trì, mở rộng và linh hoạt.
+
+
+***S: Single Responsibility Principle- Nguyên tắc đơn trách nhiệm.
+- Mỗi phần của chương trình chỉ nên làm một việc duy nhất. Nếu phần có nhiều nhiệm vụ, nó sẽ khó bảo trì và dễ gây lỗi khi thay đổi.
+- Giúp mã nguồn dễ bảo trì, dễ mở rộng và debug
+
+***O-Open/closed Principle- nguyên tắc đóng mở
+***L-Liskov - Nguyên tắc thay thế.
+- một lớp con có thể thay thế lớp cha mà không làm thay đổi tính đúng đắn của chương trình.
+- Đảm bảo
+***I-Interface Segregation Principle - Nguyên tắc phân chia interface.
+- một class không nên bị ép buộc triển khai những phương thức mà nó không sử dụng
+- Tránh việc các class con phải cài đặt các phương thức không liên quan
+***D ependency inversion Principle- Nguyên tắc đảo ngược sự phụ thuộc.
+- các phần quan trọng

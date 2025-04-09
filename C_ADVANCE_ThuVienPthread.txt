@@ -1,2 +1,17 @@
 Thư viện PThread: thư viện đa luồng
 - không phải là thư viện tiêu chuẩn cho lập trình đa luồng trong C/C++, cho phép lập trình đa luồng, chạy nhiều task cùng lúc
+
+***** khởi tạo 1 luồng
+pthread_create(pthread_t *th, const pthread_attr_t *attr, voi*(* func)(void *), void *arg))
+- tham số 1: một con trỏ kiểu pthread_t, đại diện cho một thread mới được tạo ra
+- Tham số 2: một thuộc tính của Thread, đặt là NULL nếu diuwx thuộc tính mặc định
+- Tham số 3: địa chỉ hàm muốn thực thi
+- Tham số 4: một con trỏ đối sô cho hàm thuộc kiểu void
+
+NOTE: phải đảm bảo luồng chính thực thì thì các luồn phụ mới thực thi.
+
+
+***** dùng để chờ cho luồng t thực thi xong thì luồng chính mới thực thi
+int pthread_join(pthread_t t, void **res)
+- Tham số 1: ID của thread mà bạn muốn chờ đợi thực thi.
+- Tham số 2: ptr to ptr mà kết quả trả về từ thread sẽ được lưu trữ. Nếu không cần kết quả có thể đặt NUL

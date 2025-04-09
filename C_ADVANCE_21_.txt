@@ -1,0 +1,19 @@
+Quy trình triển khai dự án quản lý kahcs sạn (OOP)
+1. Quy trình phát triển phần mềm.
+1.1 Tổng quan các bước.
+1.2: Xác định yêu cầu hệ thống
+a) yêu cầu chức ăng.
+- quản lý thông tin phognf/nhân viên/ dịch vụ/
+- đăng nhập hệ thống
+- xem báo cáo thống kế
+b) yêu cầu phi chức năng ()
+- đảm báo hiệu năng cao: hệ thống phản hồi mượt mà
+- đảm bảo tính an toàn: Phân quyền truy cập giữa các đối tượng sử dụng hệ thống
+- đảm bảo tính bảo trì:
+
+1.3. Phân tích cụ thể các thành phần.
+a) đối tượng sử dụng và chức ăng tương ứng
+
+		ADMIN
+		   |
+		LOGIN
