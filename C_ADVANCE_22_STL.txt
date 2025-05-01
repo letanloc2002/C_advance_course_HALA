@@ -1,0 +1,13 @@
+Standard Template Library
+
+	***Vector***
+stf::vector: là một mảng động trong C++. Nó tự động quản lí bộ nhớ, có thể tăng kích thước khi thêm phần tử mới và cho phép truy cập ngẫu nhiên như mảng thông thường.
+
+	***List***
+- là một container trong STL của C++, triển khai dưới dạng DANH SÁCH LIÊN KẾT.
+- Một số đặt điểm
+
+
+- Danh sách liên kết đối: 1 node sẽ liên kết với node trước và sau nó.
+	+ Single Linker Lít: duyệt 1 chiều từ node đầu tới node cuối
+	+ Double Linker list: duyệt được từ đầu tới cuối và ngược lại.

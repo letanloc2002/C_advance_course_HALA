@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <stdbool.h>
 typedef struct node
 {
     int value;
@@ -65,7 +65,87 @@ void pop_back(node **array)
     p->next = NULL;
     free(temp);
 }
+void pop_front(node **array)
+{
+    if (*array == NULL)
+    {
+        return;
+    }
+    node *temp = *array;
+    *array = (*array)->next;
+    free(temp);
+}
+// lay gia tri cua node dau tien
+int front(node *array)
+{
+    int value;
+    if (array == NULL)
+    {
+        return value = NULL;
+    }
+    return value = array->value;
+}
+// lay gia tri cua node cuoi cung
+int back(node *array)
+{
+    int value;
+    if (array == NULL)
+    {
+        return value = NULL;
+    }
+    while (array->next != NULL)
+    {
+        array = array->next;
+    }
+    return value = array->value;
+}
+// xoa gia tri cua 1 node bat ki
+void erase(node **array, int pos)
+{
+    if (*array == NULL)
+    {
+        printf("Danh sach rong.\n");
+        return;
+    }
 
+    node *temp = *array;
+
+    // Xóa node đầu
+    if (pos == 0)
+    {
+        *array = temp->next;
+        free(temp);
+        return;
+    }
+
+    // Tìm node trước node cần xóa
+    for (int i = 0; temp != NULL && i < pos - 1; i++)
+    {
+        temp = temp->next;
+    }
+
+    // Nếu position không hợp lệ
+    if (temp == NULL || temp->next == NULL)
+    {
+        printf("Vi tri khong hop le.\n");
+        return;
+    }
+
+    node *nodeToDelete = temp->next;
+    temp->next = NULL;
+
+    free(nodeToDelete);
+}
+bool empty(node **array)
+{
+    bool empty;
+    if (*array == NULL)
+    {
+        printf("array is empty");
+        return empty = true;
+    }
+    return empty = false;
+}
 int get(node *array, int pos)
 {
     int i = 0;

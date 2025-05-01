@@ -1,0 +1,42 @@
+LAMBDA
+- thông thường các hàm ta viết là hàm toàn cục, để sử dụng trong các hàm khác hoặc hàm main hoặc sử dụng trong các file khác
+- hàm lambda là 1 hàm nhưng THƯỜNG chỉ sử dụng 1 lần duy nhất xong rồi mất đi.
+- là 1 hàm không có tên.
+[Cú pháp]
+
+[capture](parameter_list) -> return_type
+{
+	//function body
+}
+
+[capture](parameter_list)
+{
+	//function body
+}
+
+- được định nghĩa tại chỗ, có thể khai báo toàn cục hoặc cục bộ.
+- Cách 1: Sử dụng 1 lần duy nhất ngay sau khi khai báo
+[]() -> void
+{
+	cout <<"Hello"
+}
+- Cách 2: Lưu trữ lambda thông qua biến.
+auto func =[]() 
+{
+	cout <<"Hello"
+}
+
+func();
+
+ --> khi sử dụng theo cách này thì hàm lambda sẽ chỉ tồn tại trong hàm khai báo
+
+
+// capture: cách sử dụng các biến xung quanh lambda
+ 
+- []: không sử dụng bất kì các biến xung quanh nào.
+- [var]: chỉ được đọc chứ không được phép thay đổi, read-only
+- [&var]: tham chiến đến địa chỉ biến này thì có thể hay đổi giá trị, read-write.
+
+- [&a,b]: a có thể đọc vafgh,i, b chỉ có thể đọc.
+- [=]: truyền vào tất cả giá trị nhưng k thể thay đổi được, read only
+- [&]:truyền vào tất cả giá trị và có thể đọc và ghi, read and write.
